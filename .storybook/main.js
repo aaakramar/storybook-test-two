@@ -13,6 +13,14 @@ const config = {
         },
       },
     },
+    {
+      name: "@storybook/addon-docs",
+      options: {
+        sidebar: {
+          title: "Your Custom Title",
+        },
+      },
+    },
   ],
   framework: {
     name: "@storybook/react-webpack5",
