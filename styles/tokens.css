@@ -1,0 +1,9 @@
+:root {
+  --color-primary: #4f46e5;
+  --color-secondary: #FFFFFF;
+  --color-tertiary: #57BC68;
+  --color-danger: #DC3545;
+  --color-main-background: #F8FAFC;
+  --color-card-background: #FFFFFF; 
+  --box-shadow-sm: 0px 4px 5px rgba(0,0,0,0.07);
+}
