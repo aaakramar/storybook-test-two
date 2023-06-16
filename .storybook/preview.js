@@ -1,6 +1,6 @@
 /** @type { import('@storybook/react').Preview } */
 
-import "../styles/tokens.css";
+import "../styles/tokens.scss";
 
 const preview = {
   parameters: {

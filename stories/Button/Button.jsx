@@ -1,29 +1,56 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import './Button.css';
+import React, { useMemo } from "react";
+import PropTypes from "prop-types";
+import "./Button.scss";
 
+export const Button = ({
+  type = "primary",
+  backgroundColor = null,
+  className,
+  size = "medium",
+  width,
+  label,
+  fontColor,
+  loading,
+  disabled = false,
+  onClick,
+  ...props
+}) => {
+  const buttonType = (type) => {
+    if (type === "primary") {
+      return "storybook-button--primary";
+    } else if (type === "secondary") {
+      return "storybook-button--secondary";
+    } else if (type === "danger") {
+      return "storybook-button--danger";
+    }
+    return "storybook-button--primary";
+  };
 
-export const Button = ({ type = "secondary", backgroundColor = null, size = "medium", label, children, onClick = undefined, ...props }) => {
-  const mode = type === "primary" ? 'storybook-button--primary' : type === "secondary" ? 'storybook-button--secondary' : 'storybook-button--danger';
+  // const disabledCLass = ""
+
+  const mode = buttonType(type);
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-      style={backgroundColor && { backgroundColor }}
+      className={[
+        className ? className : "",
+        "storybook-button",
+        `storybook-button--${size}`,
+        mode,
+      ].join(" ")}
+      style={{
+        backgroundColor: backgroundColor,
+        width: width,
+        color: fontColor,
+      }}
+      loading={loading ? loading : false}
       {...props}
+      disabled={disabled}
+      onClick={() => onClick()}
     >
-      {label}{children}
+      {label}
     </button>
   );
-};
-
-Button.propTypes = {
-  type: PropTypes.oneOf(["primary", "secondary", "danger"]),
-  backgroundColor: PropTypes.string,
-  size: PropTypes.oneOf(['small', 'medium', 'large']),
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
-  children: PropTypes.node,
 };
 
 // Button.defaultProps = {

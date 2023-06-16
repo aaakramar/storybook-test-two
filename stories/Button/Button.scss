@@ -1,0 +1,77 @@
+$color-primary: #4667e5;
+$color-primary-hover: #0810ba;
+$color-secondary: #ffffff;
+$color-secondary-hover: #dde6ed;
+$color-tertiary: #57bc68;
+$color-danger: #dc3545;
+$color-danger-hover: #c10000;
+$color-main-background: #f8fafc;
+$color-card-background: #ffffff;
+$color-primary-disabled: #4858ff;
+$box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
+
+.storybook-button {
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  line-height: 1;
+
+  &--primary {
+    color: white;
+    background-color: $color-primary;
+
+    &:hover {
+      color: white;
+      background-color: $color-primary-hover;
+    }
+  }
+
+  &--secondary {
+    color: #333;
+    background-color: transparent;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+
+    &:hover {
+      color: #333;
+      background-color: $color-secondary-hover;
+      box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
+    }
+  }
+
+  &--danger {
+    color: #ffffff;
+    background-color: $color-danger;
+
+    &:hover {
+      color: #ffffff;
+      background-color: $color-danger-hover;
+    }
+  }
+
+  &--tertiary {
+    color: white;
+    background-color: $color-tertiary;
+  }
+
+  &-default-width {
+    min-width: 7rem;
+  }
+
+  &--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  &--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+
+  &--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
