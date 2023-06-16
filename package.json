@@ -36,13 +36,8 @@
     "@storybook/react": "^7.0.20",
     "@storybook/react-webpack5": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "css-loader": "^6.8.1",
-    "node-sass": "^9.0.0",
     "prop-types": "^15.8.1",
     "sass": "^1.63.4",
-    "sass-loader": "^13.3.2",
-    "storybook": "^7.0.20",
-    "style-loader": "^3.3.3",
-    "webpack": "^5.87.0"
+    "storybook": "^7.0.20"
   }
 }
