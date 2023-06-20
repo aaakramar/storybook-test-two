@@ -1,7 +1,7 @@
 import { Button } from "./Button";
 
 export default {
-  title: "Button",
+  title: "Design System/Atoms/Button",
   component: Button,
   tags: ["autodocs"],
   argTypes: {
