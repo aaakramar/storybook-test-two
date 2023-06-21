@@ -71,6 +71,16 @@ export default {
       },
       type: "string",
     },
+    loading: {
+      table: {
+        type: {
+          summary: "Set the loading state of the button",
+        },
+      },
+      control: {
+        type: "boolean",
+      },
+    },
   },
 };
 
