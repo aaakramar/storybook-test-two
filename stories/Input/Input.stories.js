@@ -11,6 +11,7 @@ export default {
         type: {
           summary: ["Set error status"],
         },
+        defaultValue: { summary: false },
       },
     },
     disabled: {
@@ -18,12 +19,15 @@ export default {
         type: {
           summary: ["Whether the input is disabled"],
         },
+        defaultValue: { summary: false },
       },
     },
     placeholder: {
       table: {
         type: {
-          summary: [],
+          summary: [
+            "Specifies a short hint that describes the expected value ",
+          ],
         },
       },
     },
@@ -37,26 +41,62 @@ export default {
     readOnly: {
       table: {
         type: {
-          summary: [""],
+          summary: [
+            "A read-only input field cannot be modified (however, a user can tab to it, highlight it, and copy the text from it).",
+          ],
         },
+        defaultValue: { summary: false },
       },
     },
     style: {
       table: {
         type: {
-          summary: [""],
+          summary: ["Override the component's default styles"],
         },
       },
     },
   },
 };
 
-export const Default = {
-  args: {
-    error: false,
-    disabled: false,
-    readOnly: false,
-    placeholder: "",
-    style: {},
-  },
+export const Default = (args) => <Input {...args} />;
+export const Disabled = (args) => <Input {...args} />;
+export const Error = (args) => <Input {...args} />;
+export const ReadOnly = (args) => <Input {...args} />;
+
+Default.args = {
+  error: false,
+  disabled: false,
+  readOnly: false,
+  placeholder: "Placeholder",
+  style: {},
 };
+
+Disabled.args = {
+  disabled: true,
+};
+
+Error.args = {
+  error: true,
+};
+
+ReadOnly.args = {
+  readOnly: true,
+};
+
+// export const Default = {
+// args: {
+//   error: false,
+//   disabled: false,
+//   readOnly: false,
+//   placeholder: "Placeholder",
+//   style: {}
+// },
+// };
+
+// export const Disabled = {
+//   args: {
+//     // error: false,
+//     disabled: true,
+//     // readOnly: false,
+//   },
+// };
