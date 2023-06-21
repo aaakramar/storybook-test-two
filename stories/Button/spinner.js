@@ -10,7 +10,7 @@ const LoadingSpinner = (props) => {
             height: props.height,
             width: props.width,
             borderColor: "#FFFFFF",
-            borderRightColor: "#4f46e5",
+            borderRightColor: "#57bc68",
           }}
         ></div>
         {props.helperText ? props.helperText : ""}

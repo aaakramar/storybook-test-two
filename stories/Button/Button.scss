@@ -1,13 +1,5 @@
-$color-primary: #4667e5;
-$color-primary-hover: #0810ba;
-$color-secondary: #ffffff;
-$color-secondary-hover: #dde6ed;
-$color-tertiary: #57bc68;
-$color-danger: #dc3545;
-$color-danger-hover: #c10000;
-$color-main-background: #f8fafc;
-$color-card-background: #ffffff;
-$color-primary-disabled: #4858ff;
+@import "../../styles/colors.scss";
+
 $box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
 
 .storybook-button {
@@ -21,11 +13,11 @@ $box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
 
   &--primary {
     color: white;
-    background-color: $color-primary;
+    background-color: $color-57bc68;
 
     &:hover {
       color: white;
-      background-color: $color-primary-hover;
+      background-color: $color-2ca144;
     }
   }
 
@@ -36,24 +28,46 @@ $box-shadow-sm: 0px 4px 5px rgba(0, 0, 0, 0.07);
 
     &:hover {
       color: #333;
-      background-color: $color-secondary-hover;
+      background-color: $color-e5e5e5;
       box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
     }
   }
 
   &--danger {
     color: #ffffff;
-    background-color: $color-danger;
+    background-color: $color-ff5724;
 
     &:hover {
       color: #ffffff;
-      background-color: $color-danger-hover;
+      background-color: $color-e54e20;
     }
   }
 
-  &--tertiary {
-    color: white;
-    background-color: $color-tertiary;
+  &--primary--disabled {
+    background-color: $color-89d095;
+
+    &:hover {
+      background-color: $color-89d095;
+      cursor: not-allowed;
+    }
+  }
+
+  &--secondary--disabled {
+    background-color: $color-fafafa;
+
+    &:hover {
+      background-color: $color-fafafa;
+      cursor: not-allowed;
+    }
+  }
+
+  &--danger--disabled {
+    background-color: $color-ff784f;
+
+    &:hover {
+      background-color: $color-ff784f;
+      cursor: not-allowed;
+    }
   }
 
   &-default-width {

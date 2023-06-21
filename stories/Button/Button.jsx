@@ -6,44 +6,47 @@ import LoadingSpinner from "./spinner";
 
 export const Button = ({
   type = "primary",
-  backgroundColor = null,
   className,
   size = "medium",
-  width,
   label,
-  fontColor,
+  style,
   loading,
   disabled = false,
   onClick,
   ...props
 }) => {
   const buttonType = (type) => {
-    if (type === "primary") {
-      return "storybook-button--primary";
-    } else if (type === "secondary") {
-      return "storybook-button--secondary";
-    } else if (type === "danger") {
-      return "storybook-button--danger";
+    switch (type) {
+      case "primary":
+        return "storybook-button--primary";
+      case "secondary":
+        return "storybook-button--secondary";
+      case "danger":
+        return "storybook-button--danger";
+      default:
+        return "storybook-button--primary";
     }
-    return "storybook-button--primary";
   };
 
-  const mode = buttonType(type);
+  const mode = useMemo(() => buttonType(type), [type]);
   return (
     <button
       type="button"
       id="storybook-button"
       className={[
         className ? className : "",
+        disabled && type === "primary"
+          ? "storybook-button--primary--disabled"
+          : disabled && type === "secondary"
+          ? "storybook-button--secondary--disabled"
+          : disabled && type === "danger"
+          ? "storybook-button--danger--disabled"
+          : "",
         "storybook-button",
         `storybook-button--${size}`,
         mode,
       ].join(" ")}
-      style={{
-        backgroundColor: backgroundColor,
-        width: width,
-        color: fontColor,
-      }}
+      style={style}
       loading={loading ? loading : false}
       {...props}
       disabled={loading === true ? true : disabled}
