@@ -21,5 +21,9 @@ const config = {
   docs: {
     autodocs: "tag",
   },
+  bable: async (options) => ({
+    ...options,
+    presets: [...options.presets, "@bable/preset-flow"],
+  }),
 };
 export default config;

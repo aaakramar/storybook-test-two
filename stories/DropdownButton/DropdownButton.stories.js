@@ -2,7 +2,7 @@ import React from "react";
 import { DropdownButton } from "./DropdownButton";
 
 export default {
-  title: "DropdownButton",
+  title: "Design System/Atoms/DropdownButton",
   component: DropdownButton,
   tags: ["autodocs"],
   argTypes: {},

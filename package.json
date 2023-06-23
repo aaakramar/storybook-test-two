@@ -31,6 +31,7 @@
   },
   "devDependencies": {
     "@babel/preset-env": "^7.22.5",
+    "@babel/preset-flow": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@fortawesome/fontawesome-free": "^6.4.0",
     "@storybook/addon-essentials": "^7.0.20",
@@ -42,10 +43,12 @@
     "@storybook/react": "^7.0.20",
     "@storybook/react-webpack5": "^7.0.20",
     "@storybook/testing-library": "^0.0.14-next.2",
-    "css-loader": "^6.8.1",
     "@storybook/theming": "^7.0.22",
+    "css-loader": "^6.8.1",
+    "flow-bin": "^0.209.0",
     "prop-types": "^15.8.1",
     "sass": "^1.63.4",
-    "storybook": "^7.0.20"
+    "storybook": "^7.0.20",
+    "typescript": "^5.1.3"
   }
 }
