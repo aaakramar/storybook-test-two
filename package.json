@@ -2,12 +2,14 @@
   "name": "univalley-os-storybook",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "main.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "storybook dev -p 6006",
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -16,6 +18,10 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
   "bugs": {
     "url": "https://bitbucket.org/teamleverageedu/univalley-os-storybook/issues"
   },
@@ -30,10 +36,15 @@
     "sass-loader": "^13.3.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.22.5",
     "@babel/preset-env": "^7.22.5",
     "@babel/preset-flow": "^7.22.5",
     "@babel/preset-react": "^7.22.5",
     "@fortawesome/fontawesome-free": "^6.4.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^25.0.2",
+    "@rollup/plugin-node-resolve": "^15.1.0",
+    "@rollup/plugin-terser": "^0.4.3",
     "@storybook/addon-essentials": "^7.0.20",
     "@storybook/addon-interactions": "^7.0.20",
     "@storybook/addon-links": "^7.0.20",
@@ -47,6 +58,9 @@
     "css-loader": "^6.8.1",
     "flow-bin": "^0.209.0",
     "prop-types": "^15.8.1",
+    "rollup": "^3.25.3",
+    "rollup-plugin-scss": "^4.0.0",
+    "rollup-plugin-typescript2": "^0.35.0",
     "sass": "^1.63.4",
     "storybook": "^7.0.20",
     "typescript": "^5.1.3"
